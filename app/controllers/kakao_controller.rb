@@ -1,4 +1,5 @@
 class KakaoController < ApplicationController
+
   # 값을 입력 받음
   def keyboard
     @keyboard = {
@@ -13,6 +14,7 @@ class KakaoController < ApplicationController
   def message
     @user_msg = params[:content]
     # @text = "기본 텍스트"
+    
     
     if @user_msg == "로또"
       @text = (1..45).to_a.sample(6).sort.to_s
